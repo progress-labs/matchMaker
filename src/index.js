@@ -24,7 +24,7 @@ var matchMaker = {
     });
   },
 
-  register: function(eventName, cb, fireOnLoad, fireWhenMatches){
+  register: function(eventName, cb, fireOnLoad){
     this.registerCallback(eventName, cb);
     this.runCallbacks(eventName, cb, fireOnLoad)
   },
