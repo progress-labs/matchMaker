@@ -3,11 +3,10 @@ const path = require('path');
 const libName = 'matchMaker'
 const libTarget = 'umd';
 
-
 module.exports = {
   entry: {
-    'matchMaker': './src/index.js',
-    'matchMaker.min': './src/index.js'
+    'matchMaker': ['./src/index.js'],
+    'matchMaker.min': ['./src/index.js'],
   },
   devtool: "source-map",
   output: {
@@ -16,7 +15,24 @@ module.exports = {
     libraryTarget: libTarget,
     library: libName,
   },
-  plugins: [
-    new UglifyJsPlugin()
-  ]
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            "presets": [
+              ["env", {
+                "targets": {
+                  "browsers": ["last 2 versions", "safari >= 7", "ie 11"]
+                }
+              }]
+            ]
+          }
+        }
+      }
+    ]
+  }
 };

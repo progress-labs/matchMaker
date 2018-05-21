@@ -2,20 +2,24 @@
   "name": "match-maker",
   "version": "1.0.0",
   "description": "A small wrapper for the matchMedia browser API when working with media queries in JavaScript",
-  "main": "index.js",
+  "main": "dist/main..js",
   "scripts": {
-    "babel": "babel --presets es2015 index.js -o main.js",
-    "start": "http-server"
+    "dev": "webpack src/index.js -o dist/matchMaker.js --mode development",
+    "prod": "webpack src/index.js -o dist/matchMaker.min.js --mode production",
+    "test": "webpack test/test.js -o test/test.min.js"
   },
   "author": "Patrick Johnson",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "http-server": "^0.11.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
-  }
+  },
+  "dependencies": {}
 }
