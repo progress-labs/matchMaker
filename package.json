@@ -2,7 +2,7 @@
   "name": "match-maker",
   "version": "1.0.0",
   "description": "A small wrapper for the matchMedia browser API when working with media queries in JavaScript",
-  "main": "dist/main..js",
+  "main": "dist/matchMaker.min.js",
   "scripts": {
     "dev": "webpack src/index.js -o dist/matchMaker.js --mode development",
     "prod": "webpack src/index.js -o dist/matchMaker.min.js --mode production",
@@ -10,6 +10,11 @@
   },
   "author": "Patrick Johnson",
   "license": "ISC",
+  "bugs": "https://github.com/patrickbjohnson/matchMaker/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickbjohnson/matchMaker.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
