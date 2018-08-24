@@ -12,7 +12,7 @@ var matchMaker = {
    
     let matches = mq.matches;
     
-    if (matches && fireOnLoad) {
+    if (fireOnLoad) {
       callback(mq.matches);
     }
     
