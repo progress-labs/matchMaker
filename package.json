@@ -1,6 +1,6 @@
 {
   "name": "mq-match-maker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small wrapper for the matchMedia browser API when working with media queries in JavaScript",
   "main": "dist/matchMaker.min.js",
   "scripts": {
